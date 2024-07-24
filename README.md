@@ -12,7 +12,7 @@ Note: you can still use the API without a key, but it is very limited.
 ## Installation
 
 ```bash
-pip install rembg
+pip install rembg-pro
 ```
 
 ## Library
