@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="rembg",
+    name="rembg-pro",
     version="0.1.0",
     author="Marwen Trabelsi",
     author_email="marwen.trabelsi@relayr.io",

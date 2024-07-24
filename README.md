@@ -37,16 +37,16 @@ API_KEY = os.getenv('API_KEY')
 # Log upload and download progress
 
 def on_upload_progress(bytes_read, total_bytes):
-print(f"Upload progress: {bytes_read}/{total_bytes} bytes")
+    print(f"Upload progress: {bytes_read}/{total_bytes} bytes")
 
 def on_download_progress(bytes_read, total_bytes):
-print(f"Download progress: {bytes_read}/{total_bytes} bytes")
+    print(f"Download progress: {bytes_read}/{total_bytes} bytes")
 
 result = rembg(
-api_key=API_KEY,
-input_image_path='./input.png',
-on_upload_progress=on_upload_progress,
-on_download_progress=on_download_progress
+    api_key=API_KEY,
+    input_image_path='./input.png',
+    on_upload_progress=on_upload_progress,
+    on_download_progress=on_download_progress
 )
 print(f"✅🎉 Background removed and saved under path={result['outputImagePath']}")
 
@@ -75,17 +75,17 @@ API_KEY = os.getenv('API_KEY')
 # Log upload and download progress
 
 def on_upload_progress(bytes_read, total_bytes):
-print(f"Upload progress: {bytes_read}/{total_bytes} bytes")
+    print(f"Upload progress: {bytes_read}/{total_bytes} bytes")
 
 def on_download_progress(bytes_read, total_bytes):
-print(f"Download progress: {bytes_read}/{total_bytes} bytes")
+    print(f"Download progress: {bytes_read}/{total_bytes} bytes")
 
 result = rembg(
-api_key=API_KEY,
-input_image_path='./input.png',
-on_upload_progress=on_upload_progress,
-on_download_progress=on_download_progress,
-return_base64=True
+    api_key=API_KEY,
+    input_image_path='./input.png',
+    on_upload_progress=on_upload_progress,
+    on_download_progress=on_download_progress,
+    return_base64=True
 )
 print(f"✅🎉 Background removed: {result['base64Image']}")
 ```
@@ -112,17 +112,17 @@ API_KEY = os.getenv('API_KEY')
 # Log upload and download progress
 
 def on_upload_progress(bytes_read, total_bytes):
-print(f"Upload progress: {bytes_read}/{total_bytes} bytes")
+    print(f"Upload progress: {bytes_read}/{total_bytes} bytes")
 
 def on_download_progress(bytes_read, total_bytes):
-print(f"Download progress: {bytes_read}/{total_bytes} bytes")
+    print(f"Download progress: {bytes_read}/{total_bytes} bytes")
 
 result = rembg(
-api_key=API_KEY,
-input_image_path={'base64': base64_input}, # or simply an image Buffer
-on_upload_progress=on_upload_progress,
-on_download_progress=on_download_progress,
-return_base64=True
+    api_key=API_KEY,
+    input_image_path={'base64': base64_input}, # or simply an image Buffer
+    on_upload_progress=on_upload_progress,
+    on_download_progress=on_download_progress,
+    return_base64=True
 )
 print(f"✅🎉 Background removed: {result['base64Image']}")
 ```
@@ -147,18 +147,18 @@ API_KEY = os.getenv('API_KEY')
 # Log upload and download progress
 
 def on_upload_progress(bytes_read, total_bytes):
-print(f"Upload progress: {bytes_read}/{total_bytes} bytes")
+    print(f"Upload progress: {bytes_read}/{total_bytes} bytes")
 
 def on_download_progress(bytes_read, total_bytes):
-print(f"Download progress: {bytes_read}/{total_bytes} bytes")
+    print(f"Download progress: {bytes_read}/{total_bytes} bytes")
 
 result = rembg(
-api_key=API_KEY,
-input_image_path='./input.jpg',
-on_upload_progress=on_upload_progress,
-on_download_progress=on_download_progress,
-return_mask=True, # <----- Set to true to get the mask of the image
-return_base64=True # Set to true to receive the result as a Base64 string
+    api_key=API_KEY,
+    input_image_path='./input.jpg',
+    on_upload_progress=on_upload_progress,
+    on_download_progress=on_download_progress,
+    return_mask=True, # <----- Set to true to get the mask of the image
+    return_base64=True # Set to true to receive the result as a Base64 string
 )
 print(f"✅🎉 Mask retrieved: {result['base64Image']}")
 ```
